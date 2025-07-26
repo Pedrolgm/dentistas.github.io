@@ -1,0 +1,371 @@
+<!-- AUTOR: PEDRO LUIS GARCIA MARTINEZ -->
+
+<!DOCTYPE html> <!-- Indica que es un documento HTML5 -->
+<html lang="es"> <!-- Documento en idioma español -->
+
+<head>
+  <meta charset="UTF-8" /> <!-- Codificación de caracteres en UTF-8 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#007bff" />
+   <!-- Diseño responsivo para dispositivos móviles -->
+  <title>Clínica Dental</title> <!-- Título que aparece en la pestaña del navegador -->
+
+  <!-- Favicon general -->
+  <link rel="icon" type="image/png" sizes="192px" href="images/favicon.avif"> 
+  
+  <link rel="manifest" href="manifest.json">
+
+  <!-- Font APIS de Google -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> <!-- Fuente Roboto -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet"> <!-- Fuente Open Sans -->
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet"> <!-- Fuente Lato -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet"> <!-- Fuente Montserrat -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet"> <!-- Fuente Inter -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet"> <!-- Fuente Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet"> <!-- Fuente Playfair Display -->
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet"> <!-- Fuente Merriweather -->
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet"> <!-- Fuente Raleway -->
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet"> <!-- Fuente Nunito -->
+
+  <!-- Importa Bootstrap 5 desde CDN para estilos rápidos y responsivos -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Importa íconos de FontAwesome (versión 6.4.0) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <!-- Enlace a tu archivo CSS personalizado -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- Loader (pantalla de carga animada al entrar al sitio) -->
+  <div id="loader" class="loader">
+    <i class="fas fa-tooth fa-spin fa-4x text-primary"></i> <!-- Icono de diente girando mientras carga la página -->
+  </div>
+
+  <!-- Menú de navegación fijo en la parte superior -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <!-- Logo y nombre del sitio con icono -->
+      <a class="navbar-brand" href="#"><i class="fas fa-tooth me-1 fa-2x mb-2 text-width"></i>ClínicaDental</a>
+
+      <!-- Botón hamburguesa para mostrar menú en dispositivos móviles -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span> <!-- Icono hamburguesa -->
+      </button>
+
+      <!-- Enlaces del menú dentro de contenedor colapsable -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto"> <!-- ms-auto alinea el menú a la derecha -->
+          <li class="nav-item"><a class="nav-link" href="index.html"><i class="fas fa-home me-1"></i>Inicio</a></li> <!-- Link a inicio con icono casa -->
+          <li class="nav-item"><a class="nav-link" href="#servicios"><i class="fas fa-tooth me-1"></i>Servicios</a></li> <!-- Link a sección servicios -->
+          <li class="nav-item"><a class="nav-link" href="perfiles.html"><i class="fas fa-user-md me-1"></i>Perfil</a></li> <!-- Link a perfil dentistas -->
+          <li class="nav-item"><a class="nav-link" href="galeria.html"><i class="fas fa-images me-1"></i>Galería</a></li> <!-- Link a galería -->
+          <li class="nav-item"><a class="nav-link" href="testimonio.html"><i class="fas fa-comments me-1"></i>Testimonios</a></li> <!-- Link a testimonios -->
+          <li class="nav-item"><a class="nav-link" href="blog.html"><i class="fas fa-blog me-1"></i>Blog</a></li> <!-- Link a blog -->
+          <li class="nav-item"><a class="nav-link" href="contacto.html"><i class="fas fa-envelope me-1"></i>Contacto</a></li> <!-- Link a contacto -->
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Carrusel de imágenes -->
+  <div id="carouselExample" class="carousel slide position-relative" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <!-- Primer slide activo -->
+      <div class="carousel-item active">
+        <img src="images/dentista01.jpg" class="d-block w-100" alt="Sonrisa saludable" /> <!-- Imagen slide -->
+        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-3">
+          <h1>Tu sonrisa, nuestra prioridad</h1> <!-- Título del slide -->
+          <p>Clínica dental profesional con atención personalizada para toda la familia</p> <!-- Descripción -->
+          <a href="#contacto" class="btn btn-primary">Agendar cita</a> <!-- Botón para agendar cita -->
+        </div>
+      </div>
+
+      <!-- Segundo slide -->
+      <div class="carousel-item">
+        <img src="images/dentista02.jpg" class="d-block w-100" alt="Sonrisa saludable" />
+        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-3">
+          <h1>Atención especializada para niños y adultos</h1>
+          <p>Tu salud bucal en manos de expertos comprometidos</p>
+          <a href="#contacto" class="btn btn-primary">Agenda tu cita</a>
+        </div>
+      </div>
+
+      <!-- Tercer slide -->
+      <div class="carousel-item">
+        <img src="images/dentista03.jpg" class="d-block w-100" alt="Sonrisa saludable" />
+        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-3">
+          <h1>Atención especializada para niños y adultos</h1>
+          <p>Tu salud bucal en manos de expertos comprometidos</p>
+          <a href="#contacto" class="btn btn-primary">Agenda tu cita</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Controles del carrusel para navegar slides -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span> <!-- Icono flecha anterior -->
+      <span class="visually-hidden">Anterior</span> <!-- Texto para accesibilidad -->
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span> <!-- Icono flecha siguiente -->
+      <span class="visually-hidden">Siguiente</span> <!-- Texto para accesibilidad -->
+    </button>
+  </div>
+
+  <!-- Sección "Quiénes Somos" -->
+  <section id="quienes-somos" class="py-5 bg-light">
+    <div class="container">
+      <!-- Título principal con icono -->
+      <h2 class="text-center mb-5"><i class="fas fa-users text-primary"></i> ¿Quiénes Somos?</h2>
+
+      <!-- Descripción centrada -->
+      <div class="row justify-content-center">
+        <div class="col-md-10 text-center mb-5">
+          <p class="lead">
+            Somos una clínica dental comprometida con el bienestar y la salud bucal de nuestros pacientes.
+            Brindamos atención personalizada con tecnología de punta y un equipo médico altamente calificado.
+          </p>
+        </div>
+      </div>
+
+      <!-- Tarjetas Misión, Visión y Valores -->
+      <div class="row text-center">
+        <!-- Misión -->
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 shadow-sm border-0">
+            <div class="card-body">
+              <h4 class="card-title text-primary"><i class="fas fa-bullseye"></i> Misión</h4>
+              <p class="card-text">
+                Ofrecer servicios odontológicos de alta calidad, con ética, profesionalismo y calidez humana.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Visión -->
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 shadow-sm border-0">
+            <div class="card-body">
+              <h4 class="card-title text-success"><i class="fas fa-eye"></i> Visión</h4>
+              <p class="card-text">
+                Ser una clínica dental reconocida en San Luis Potosí por su excelencia en atención y resultados.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Valores -->
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 shadow-sm border-0">
+            <div class="card-body">
+              <h4 class="card-title text-warning"><i class="fas fa-heart"></i> Valores</h4>
+              <ul class="list-unstyled">
+                <li><i class="fas fa-check text-success me-2"></i>Honestidad</li>
+                <li><i class="fas fa-check text-success me-2"></i>Compromiso</li>
+                <li><i class="fas fa-check text-success me-2"></i>Responsabilidad</li>
+                <li><i class="fas fa-check text-success me-2"></i>Empatía</li>
+                <li><i class="fas fa-check text-success me-2"></i>Profesionalismo</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección de Servicios -->
+  <section id="servicios" class="servicios text-center py-5">
+    <div class="container">
+      <h2 class="mb-5 text-primary fw-bold">Nuestros Servicios</h2>
+
+      <div class="row">
+        <!-- Tarjeta servicio Limpieza dental -->
+        <div class="col-md-4 mb-4">
+          <div class="card p-4">
+            <i class="fas fa-tooth fa-3x mb-3 text-primary"></i> <!-- Icono de diente -->
+            <h5 class="fw-bold">Limpieza dental</h5>
+            <p>Eliminamos sarro y placa para una sonrisa más sana.</p>
+          </div>
+        </div>
+
+        <!-- Tarjeta servicio Ortodoncia -->
+        <div class="col-md-4 mb-4">
+          <div class="card p-4">
+            <i class="fas fa-teeth-open fa-3x mb-3 text-primary"></i> <!-- Icono de dientes abiertos -->
+            <h5 class="fw-bold">Ortodoncia</h5>
+            <p>Brackets tradicionales e invisibles para alinear tus dientes.</p>
+          </div>
+        </div>
+
+        <!-- Tarjeta servicio Estética dental -->
+        <div class="col-md-4 mb-4">
+          <div class="card p-4">
+            <i class="fas fa-smile-beam fa-3x mb-3 text-primary"></i> <!-- Icono sonrisa -->
+            <h5 class="fw-bold">Estética dental</h5>
+            <p>Blanqueamiento, carillas y más para una sonrisa perfecta.</p>
+          </div>
+        </div>
+
+        <!-- Tarjetas adicionales con servicios -->
+        <div class="col-md-4 mb-4">
+          <div class="card p-4">
+            <i class="fas fa-tooth fa-3x mb-3 text-primary"></i>
+            <h5 class="fw-bold">Extracciones</h5>
+            <p>Eliminamos sarro y placa para una sonrisa más sana.</p>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+          <div class="card p-4">
+            <i class="fas fa-procedures fa-3x mb-3 text-primary"></i>
+            <h5 class="fw-bold">Endodoncias</h5>
+            <p>Brackets tradicionales e invisibles para alinear tus dientes.</p>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+          <div class="card p-4">
+            <i class="fas fa-syringe fa-3x mb-3 text-primary"></i>
+            <h5 class="fw-bold">Empastes</h5>
+            <p>Blanqueamiento, carillas y más para una sonrisa perfecta.</p>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+          <div class="card p-4">
+            <i class="fas fa-teeth fa-3x mb-3 text-primary"></i>
+            <h5 class="fw-bold">Implantes</h5>
+            <p>Blanqueamiento, carillas y más para una sonrisa perfecta.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Línea divisoria -->
+      <hr class="my-5" style="border-top: 3px solid rgb(51, 98, 239); width: 80%; margin: auto;">
+
+      <!-- Sección de dentistas disponibles -->
+      <div class="row justify-content-center mt-4">
+        <h2 class="mb-5 text-primary fw-bold">Dentistas disponibles</h2>
+
+        <!-- Tarjeta dentista Dra. Ana López -->
+        <div class="col-md-4 mb-4">
+          <div class="card shadow-sm p-4 border-0" style="background-color: #fff;">
+            <div class="d-flex align-items-center mb-2">
+              <i class="fas fa-user-md fa-2x mb-2 text-primary me-4"></i> <!-- Icono dentista -->
+              <div style="text-align: left;">
+                <h5 class="fw-bold mb-0 text-primary">Dra. Ana López</h5> <!-- Nombre -->
+                <p class="text-muted mb-0 small">Cirujano Dentista | Cédula Prof. 12345678</p> <!-- Título y cédula -->
+              </div>
+            </div>
+            <!-- Información de contacto -->
+            <div class="text-muted small mt-3" style="text-align: left;">
+              <p class="mb-1"><i class="fas fa-phone-alt me-2 text-primary"></i>444-123-4567</p> <!-- Teléfono -->
+              <p class="mb-1"><i class="fas fa-envelope me-2 text-primary"></i>laura@clinicadental.com</p> <!-- Email -->
+              <p class="mb-0"><i class="fas fa-map-marker-alt me-2 text-primary"></i>Av. Principal 123, San Luis Potosí, SLP</p><br> <!-- Dirección -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Tarjeta dentista Dr. Juan Pérez (igual estructura) -->
+        <div class="col-md-4 mb-4">
+          <div class="card shadow-sm p-4 border-0" style="background-color: #fff;">
+            <div class="d-flex align-items-center mb-2">
+              <i class="fas fa-user-md fa-2x mb-2 text-primary me-4"></i>
+              <div style="text-align: left;">
+                <h5 class="fw-bold mb-0 text-primary">Dr. Juan Pérez</h5>
+                <p class="text-muted mb-0 small">Cirujano Dentista | Cédula Prof. 12345678</p>
+              </div>
+            </div>
+            <div class="text-muted small mt-3" style="text-align: left;">
+              <p class="mb-1"><i class="fas fa-phone-alt me-2 text-primary"></i>444-123-4567</p>
+              <p class="mb-1"><i class="fas fa-envelope me-2 text-primary"></i>laura@clinicadental.com</p>
+              <p class="mb-0"><i class="fas fa-map-marker-alt me-2 text-primary"></i>Av. Principal 123, San Luis Potosí, SLP</p><br>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección Contacto -->
+  <div id="contacto" class="section-box text-primary">
+    <h2><i class="fas fa-envelope text-primary"></i> Contacto</h2>
+    <!-- Formulario contacto -->
+    <div class="form-box col-md-6 col-lg-5">
+      <form>
+        <div class="mb-3 text-start">
+          <label class="form-label">Nombre</label> <!-- Etiqueta para nombre -->
+          <input type="text" class="form-control" /> <!-- Campo texto -->
+        </div>
+        <div class="mb-3 text-start">
+          <label class="form-label">Correo</label> <!-- Etiqueta para correo -->
+          <input type="email" class="form-control" /> <!-- Campo email -->
+        </div>
+        <div class="mb-3 text-start">
+          <label class="form-label">Mensaje</label> <!-- Etiqueta para mensaje -->
+          <textarea class="form-control" rows="3"></textarea> <!-- Área de texto -->
+        </div>
+        <!-- reCAPTCHA -->
+        <!--div class="g-recaptcha mb-3" data-sitekey="tu_clave_publica"></div>
+        <div class="text-center"-->   <!-- Preparado para activar un reCAPTCHA -->
+          <button type="submit" class="btn btn-primary">Enviar</button> <!-- Botón enviar -->
+        </div>
+      </form>
+    </div>
+
+
+  <!-- Pie de página -->
+  <footer class="text-center">
+    <div class="container">
+      <p>&copy; 2025 Clínica Dental. Diseñado por <strong>Pedro Luis García Martínez</strong></p> <!-- Copyright -->
+      <p><a href="#">Aviso de privacidad</a> | <a href="#">Horarios</a></p> <!-- Enlaces legales -->
+      <div>
+        <a href="#" class="me-3"><i class="fab fa-facebook-f"></i></a> <!-- Icono Facebook -->
+        <a href="#" class="me-3"><i class="fab fa-instagram"></i></a> <!-- Icono Instagram -->
+        <a href="#"><i class="fab fa-whatsapp"></i></a> <!-- Icono WhatsApp -->
+      </div>
+    </div>
+  </footer>
+
+  <!-- Botones flotantes -->
+  <a href="https://wa.me/5214440000000" class="circle whatsapp" target="_blank"><i class="fab fa-whatsapp"></i></a> <!-- WhatsApp flotante -->
+  <a href="#" class="circle top-btn"><i class="fas fa-arrow-up"></i></a> <!-- Botón volver arriba -->
+
+  <!-- Scripts de Bootstrap para funcionalidades -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Script para ocultar loader después de cargar la página -->
+  <script>
+    window.addEventListener("load", function () {
+      const loader = document.getElementById("loader");
+      setTimeout(() => {
+        if (loader) {
+          loader.classList.add("hidden"); // Agrega clase para ocultar con transición
+          setTimeout(() => {
+            loader.remove(); // Remueve loader del DOM
+          }, 500);
+        }
+      }, 1500);
+    });
+  </script>
+
+  <!-- Enlace a tu archivo JavaScript personalizado -->
+  <script src="js/script.js"></script>
+  <!-- reCAPTCHA v2 (invisible, sin validación real aún) -->
+  <!--script src="https://www.google.com/recaptcha/api.js" async defer></script-->
+
+  <script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('service-worker.js')
+      .then(() => console.log('Service Worker registrado'))
+      .catch(err => console.error('Error registrando SW:', err));
+  }
+</script>
+
+</body>
+
+</html>

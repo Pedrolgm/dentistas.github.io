@@ -1,0 +1,188 @@
+<!-- AUTOR: PEDRO LUIS GARCIA MARTINEZ -->
+
+<!DOCTYPE html> <!-- Define que el documento es HTML5 -->
+<html lang="es"> <!-- Idioma principal: español -->
+<head>
+  <meta charset="UTF-8" /> <!-- Codificación UTF-8 para soporte de caracteres especiales -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" /> <!-- Diseño responsivo para móviles -->
+  <title>Clínica Dental</title> <!-- Título que aparece en la pestaña del navegador -->
+
+  <!-- Favicon (icono de la pestaña) -->
+  <link rel="icon" type="image/png" sizes="192px" href="images/favicon.avif">
+
+  <!-- Fuentes importadas de Google Fonts para estilos tipográficos variados -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 CSS desde CDN para estilos y diseño responsivo -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  
+  <!-- FontAwesome para íconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <!-- CSS personalizado -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+<!-- Loader: pantalla de carga con icono animado -->
+<div id="loader" class="loader">
+  <i class="fas fa-tooth fa-spin fa-4x text-primary"></i> <!-- Icono de diente girando para animación -->
+</div>
+
+<!-- Barra de navegación fija en la parte superior -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+  <div class="container">
+    <!-- Logo/nombre con ícono -->
+    <a class="navbar-brand" href="#"><i class="fas fa-tooth me-1 fa-2x mb-2 text-width"></i>ClínicaDental</a>
+
+    <!-- Botón hamburguesa para dispositivos móviles -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span> <!-- Icono menú hamburguesa -->
+    </button>
+
+    <!-- Menú desplegable -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto"> <!-- ms-auto empuja el menú a la derecha -->
+        <!-- Ítems del menú con íconos y enlaces a páginas -->
+        <li class="nav-item"><a class="nav-link" href="index.html"><i class="fas fa-home me-1"></i>Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" href="perfiles.html"><i class="fas fa-user-md me-1"></i>Perfil</a></li>
+        <li class="nav-item"><a class="nav-link" href="galeria.html"><i class="fas fa-images me-1"></i>Galería</a></li>
+        <li class="nav-item"><a class="nav-link" href="testimonio.html"><i class="fas fa-comments me-1"></i>Testimonios</a></li>
+        <li class="nav-item"><a class="nav-link" href="blog.html"><i class="fas fa-blog me-1"></i>Blog</a></li>
+        <li class="nav-item"><a class="nav-link" href="contacto.html"><i class="fas fa-envelope me-1"></i>Contacto</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Encabezado de la página con fondo azul y texto blanco centrado -->
+<header class="bg-primary text-white text-center py-4">
+  <h1>Testimonios</h1> <!-- Título de la sección -->
+</header>
+
+<!-- Contenido principal -->
+<main class="container py-5">
+  <h2 class="text-center mb-5"><i class="fas fa-comments text-primary"></i> Testimonios</h2> <!-- Subtítulo con icono -->
+
+  <!-- Grid de testimonios, con espacio entre columnas y filas -->
+  <div class="row g-4">
+    <!-- Cada testimonio dentro de una columna de tamaño md-6 (mitad de la pantalla en desktop) -->
+    <div class="col-md-6">
+      <blockquote class="blockquote border rounded p-4 shadow-sm">
+        <p>"Excelente atención, me sentí muy cómoda durante todo el tratamiento. Desde la recepción hasta la consulta, todo fue perfecto."</p>
+        <footer class="blockquote-footer text-white">Laura Pérez</footer> <!-- Autor del testimonio -->
+      </blockquote>
+    </div>
+    <div class="col-md-6">
+      <blockquote class="blockquote border rounded p-4 shadow-sm">
+        <p>"La mejor clínica que he visitado. Muy profesional el equipo, las instalaciones limpias y modernas."</p>
+        <footer class="blockquote-footer text-white">Carlos Hernández</footer>
+      </blockquote>
+    </div>
+    <!-- Más testimonios siguen con la misma estructura -->
+    <div class="col-md-6">
+      <blockquote class="blockquote border rounded p-4 shadow-sm">
+        <p>"Me explicaron todo con detalle antes del tratamiento. Me sentí en confianza desde el primer momento."</p>
+        <footer class="blockquote-footer text-white">Ana María Torres</footer>
+      </blockquote>
+    </div>
+    <div class="col-md-6">
+      <blockquote class="blockquote border rounded p-4 shadow-sm">
+        <p>"Acudí por una urgencia dental y me atendieron rápidamente. Excelente servicio, los recomiendo ampliamente."</p>
+        <footer class="blockquote-footer text-white">Luis Ramírez</footer>
+      </blockquote>
+    </div>
+    <div class="col-md-6">
+      <blockquote class="blockquote border rounded p-4 shadow-sm">
+        <p>"Nunca pensé que una limpieza dental pudiera ser tan cómoda. Cuidan cada detalle y son muy amables."</p>
+        <footer class="blockquote-footer text-white">Verónica Salas</footer>
+      </blockquote>
+    </div>
+    <div class="col-md-6">
+      <blockquote class="blockquote border rounded p-4 shadow-sm">
+        <p>"Muy agradecido con el trabajo del doctor. Me colocaron brackets y el seguimiento ha sido excelente."</p>
+        <footer class="blockquote-footer text-white">Diego Mendoza</footer>
+      </blockquote>
+    </div>
+    <div class="col-md-6">
+      <blockquote class="blockquote border rounded p-4 shadow-sm">
+        <p>"Mi hijo necesitaba atención pediátrica dental y todo el equipo fue muy atento y paciente."</p>
+        <footer class="blockquote-footer text-white">Marcela Gómez</footer>
+      </blockquote>
+    </div>
+    <div class="col-md-6">
+      <blockquote class="blockquote border rounded p-4 shadow-sm">
+        <p>"La consulta fue puntual, el diagnóstico muy claro y el trato muy humano. 100% recomendable."</p>
+        <footer class="blockquote-footer text-white">Jorge Ayala</footer>
+      </blockquote>
+    </div>
+    <div class="col-md-6">
+      <blockquote class="blockquote border rounded p-4 shadow-sm">
+        <p>"Los precios son justos y el trato es excelente. Salí muy satisfecho con mi tratamiento."</p>
+        <footer class="blockquote-footer text-white">Rebeca López</footer>
+      </blockquote>
+    </div>
+    <div class="col-md-6">
+      <blockquote class="blockquote border rounded p-4 shadow-sm">
+        <p>"Volveré sin duda. Me hicieron sentir segura, escuchada y bien atendida en todo momento."</p>
+        <footer class="blockquote-footer text-white">Isabel Navarro</footer>
+      </blockquote>
+    </div>
+  </div>
+</main>
+
+<!-- Pie de página -->
+<footer class="text-center">
+  <div class="container">
+    <p>&copy; 2025 Clínica Dental. Todos los derechos reservados.</p> <!-- Derechos reservados -->
+    <p><a href="#">Aviso de privacidad</a> | <a href="#">Horarios</a></p> <!-- Enlaces legales -->
+    <div>
+      <!-- Íconos redes sociales -->
+      <a href="#" class="me-3"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" class="me-3"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-whatsapp"></i></a>
+    </div>
+  </div>
+</footer>
+
+<!-- Botón flotante de WhatsApp -->
+<a href="https://wa.me/5214440000000" class="circle whatsapp" target="_blank"><i class="fab fa-whatsapp"></i></a>
+
+<!-- Botón flotante para volver arriba -->
+<a href="#" class="circle top-btn"><i class="fas fa-arrow-up"></i></a>
+
+<!-- Scripts de Bootstrap para funcionalidad (colapsar menú, etc.) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Script para ocultar loader al cargar la página -->
+<script>
+  window.addEventListener("load", function () {
+    const loader = document.getElementById("loader");
+
+    setTimeout(() => {
+      if (loader) {
+        loader.classList.add("hidden"); // Oculta loader con clase
+
+        // Elimina loader después de 500ms para liberar recursos
+        setTimeout(() => {
+          loader.remove();
+        }, 500);
+      }
+    }, 1500); // Muestra loader 1.5 segundos antes de ocultar
+  });
+</script>
+
+<!-- Archivo JS personalizado -->
+<script src="js/script.js"></script>
+
+</body>
+</html>

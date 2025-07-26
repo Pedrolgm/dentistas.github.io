@@ -1,0 +1,249 @@
+<!-- AUTOR: PEDRO LUIS GARCIA MARTINEZ -->
+
+<!DOCTYPE html> <!-- Define el documento como HTML5 -->
+<html lang="es"> <!-- Idioma principal de la página: español -->
+<head>
+  <meta charset="UTF-8" /> <!-- Codificación de caracteres en UTF-8 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" /> <!-- Configura el viewport para diseño responsivo -->
+  <title>Clínica Dental</title> <!-- Título que aparece en la pestaña del navegador -->
+
+  <!-- Favicon (icono de pestaña del navegador) -->
+  <link rel="icon" type="image/png" sizes="192px" href="images/favicon.avif">
+
+  <!-- Importación de fuentes de Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> <!-- Fuente Roboto -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet"> <!-- Fuente Open Sans -->
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet"> <!-- Fuente Lato -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet"> <!-- Fuente Montserrat -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet"> <!-- Fuente Inter -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet"> <!-- Fuente Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet"> <!-- Fuente Playfair Display -->
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet"> <!-- Fuente Merriweather -->
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet"> <!-- Fuente Raleway -->
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet"> <!-- Fuente Nunito -->
+
+  <!-- Bootstrap 5 CSS desde CDN para estilos y responsividad -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- FontAwesome para íconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <!-- Animate.css para animaciones CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+  <!-- Estilos CSS personalizados -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Loader: pantalla de carga con ícono giratorio -->
+<div id="loader" class="loader">
+  <i class="fas fa-tooth fa-spin fa-4x text-primary"></i> <!-- Icono de diente girando -->
+</div>
+
+<!-- Menú de navegación fijo en la parte superior -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+  <div class="container">
+    <!-- Logo o nombre del sitio con icono -->
+    <a class="navbar-brand" href="#"><i class="fas fa-tooth me-1 fa-2x mb-2 text-width"></i>ClínicaDental</a>
+
+    <!-- Botón hamburguesa para colapsar menú en dispositivos móviles -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span> <!-- Icono hamburguesa -->
+    </button>
+
+    <!-- Contenedor colapsable con enlaces del menú -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto"> <!-- ms-auto: margen automático a la izquierda para alinear a la derecha -->
+        <!-- Ítems de navegación con iconos -->
+        <li class="nav-item"><a class="nav-link" href="index.html"><i class="fas fa-home me-1"></i>Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" href="perfiles.html"><i class="fas fa-user-md me-1"></i>Perfil</a></li>
+        <li class="nav-item"><a class="nav-link" href="galeria.html"><i class="fas fa-images me-1"></i>Galería</a></li>
+        <li class="nav-item"><a class="nav-link" href="testimonio.html"><i class="fas fa-comments me-1"></i>Testimonios</a></li>
+        <li class="nav-item"><a class="nav-link" href="blog.html"><i class="fas fa-blog me-1"></i>Blog</a></li>
+        <li class="nav-item"><a class="nav-link" href="contacto.html"><i class="fas fa-envelope me-1"></i>Contacto</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Encabezado principal de la página -->
+<header class="bg-primary text-white text-center py-4">
+  <h1>Blog</h1> <!-- Título principal -->
+</header>
+
+<!-- Contenido principal -->
+<main class="container py-5">
+  <div>
+    <!-- Título sección con animación -->
+    <h2 class="mb-5 text-center animate__animated animate__fadeInUp">
+      <i class="fas fa-blog text-primary"></i> Últimos Artículos del Blog
+    </h2>
+
+    <div class="row g-4"> <!-- Contenedor tipo fila con separación entre columnas -->
+
+      <!-- Artículo 1 -->
+      <div class="col-md-6 animate__animated animate__fadeInLeft"> <!-- Columna de tamaño mediano con animación -->
+        <div class="border rounded p-4 shadow-sm h-100"> <!-- Tarjeta con borde, sombra y padding -->
+          <h4><i class="fas fa-tooth text-success me-2"></i> Sonrisa saludable</h4> <!-- Título con icono -->
+          <p class="text-muted mb-1"><i class="far fa-calendar-alt me-1"></i> 15 de julio de 2025</p> <!-- Fecha con icono -->
+          <p>Consejos prácticos para cuidar tu higiene dental diaria.</p> <!-- Descripción breve -->
+          <!-- Botón que abre modal con más detalles -->
+          <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal1">Ver más detalles</button>
+        </div>
+      </div>
+
+      <!-- Modal para artículo 1 -->
+      <div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="modal1Label" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <!-- Cabecera del modal -->
+            <div class="modal-header">
+              <h5 class="modal-title" id="modal1Label">Sonrisa saludable</h5> <!-- Título modal -->
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button> <!-- Botón cerrar -->
+            </div>
+            <!-- Cuerpo del modal -->
+            <div class="modal-body">
+              <p>Una sonrisa saludable comienza con hábitos diarios: cepilla tus dientes al menos dos veces al día con pasta fluorada, usa hilo dental y enjuague bucal. Evita azúcares, bebe agua y visita al dentista cada 6 meses.</p>
+            </div>
+            <!-- Pie del modal -->
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button> <!-- Botón cerrar -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Artículo 2 -->
+      <div class="col-md-6 animate__animated animate__fadeInRight">
+        <div class="border rounded p-4 shadow-sm h-100">
+          <h4><i class="fas fa-user-md text-info me-2"></i> Ortodoncia invisible</h4>
+          <p class="text-muted mb-1"><i class="far fa-calendar-alt me-1"></i> 10 de julio de 2025</p>
+          <p>Ventajas de usar alineadores invisibles para alinear tus dientes.</p>
+          <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal2">Ver más detalles</button>
+        </div>
+      </div>
+
+      <!-- Modal para artículo 2 -->
+      <div class="modal fade" id="modal2" tabindex="-1" aria-labelledby="modal2Label" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modal2Label">Ortodoncia invisible</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body">
+              <p>Los alineadores invisibles son ideales para quienes buscan discreción. Son cómodos, removibles y se adaptan a tu día a día. Requieren disciplina pero logran excelentes resultados sin los brackets tradicionales.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Artículo 3 -->
+      <div class="col-md-6 animate__animated animate__fadeInLeft">
+        <div class="border rounded p-4 shadow-sm h-100">
+          <h4><i class="fas fa-child text-warning me-2"></i> Cuidados dentales en niños</h4>
+          <p class="text-muted mb-1"><i class="far fa-calendar-alt me-1"></i> 5 de julio de 2025</p>
+          <p>Recomendaciones esenciales para mantener sanos los dientes de los más pequeños.</p>
+          <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal3">Ver más detalles</button>
+        </div>
+      </div>
+
+      <!-- Modal para artículo 3 -->
+      <div class="modal fade" id="modal3" tabindex="-1" aria-labelledby="modal3Label" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modal3Label">Cuidados dentales en niños</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body">
+              <p>Desde la primera dentición es vital inculcar hábitos de higiene. Usa cepillos pequeños, evita biberones nocturnos con azúcar, supervisa el cepillado y realiza visitas preventivas al odontopediatra desde el primer año.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Artículo 4 -->
+      <div class="col-md-6 animate__animated animate__fadeInRight">
+        <div class="border rounded p-4 shadow-sm h-100">
+          <h4><i class="fas fa-x-ray text-danger me-2"></i> ¿Qué es una endodoncia?</h4>
+          <p class="text-muted mb-1"><i class="far fa-calendar-alt me-1"></i> 1 de julio de 2025</p>
+          <p>Descubre cuándo necesitas una endodoncia y en qué consiste el procedimiento.</p>
+          <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal4">Ver más detalles</button>
+        </div>
+      </div>
+
+      <!-- Modal para artículo 4 -->
+      <div class="modal fade" id="modal4" tabindex="-1" aria-labelledby="modal4Label" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modal4Label">¿Qué es una endodoncia?</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body">
+              <p>La endodoncia es el tratamiento para salvar un diente cuyo nervio ha sido dañado por caries o trauma. Se limpia el canal, se desinfecta y se sella para conservar el diente y evitar su extracción.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</main>
+
+<!-- Pie de página -->
+<footer class="text-center">
+  <div class="container">
+    <p>&copy; 2025 Clínica Dental. Todos los derechos reservados.</p> <!-- Derechos reservados -->
+    <p><a href="#">Aviso de privacidad</a> | <a href="#">Horarios</a></p> <!-- Enlaces legales -->
+    <div>
+      <!-- Íconos redes sociales -->
+      <a href="#" class="me-3"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" class="me-3"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-whatsapp"></i></a>
+    </div>
+  </div>
+</footer>
+
+<!-- Botón flotante WhatsApp -->
+<a href="https://wa.me/5214440000000" class="circle whatsapp" target="_blank"><i class="fab fa-whatsapp"></i></a>
+
+<!-- Botón flotante subir al inicio -->
+<a href="#" class="circle top-btn"><i class="fas fa-arrow-up"></i></a>
+
+<!-- Script Bootstrap JS Bundle para funcionalidad interactiva -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Script para ocultar loader tras cargar página -->
+<script>
+  window.addEventListener("load", function () {
+    const loader = document.getElementById("loader");
+    setTimeout(() => {
+      if (loader) {
+        loader.classList.add("hidden"); // Oculta loader con clase
+        setTimeout(() => {
+          loader.remove(); // Remueve loader del DOM
+        }, 500);
+      }
+    }, 1500); // Espera 1.5 segundos antes de ocultar loader
+  });
+</script>
+
+<!-- Archivo JS personalizado -->
+<script src="js/script.js"></script>
+
+<!-- Repetido Bootstrap JS, podría eliminarse para evitar redundancia -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

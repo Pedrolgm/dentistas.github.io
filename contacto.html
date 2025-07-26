@@ -1,0 +1,165 @@
+<!-- AUTOR: PEDRO LUIS GARCIA MARTINEZ -->
+ 
+<!DOCTYPE html> <!-- Indica que el documento es HTML5 -->
+<html lang="es"> <!-- Especifica que el contenido está en español -->
+<head>
+  <meta charset="UTF-8" /> <!-- Codificación de caracteres en UTF-8 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" /> <!-- Diseño responsive para todo tipo de pantalla -->
+  <title>Clínica Dental</title> <!-- Título de la pestaña del navegador -->
+
+  <!-- Favicon (icono de pestaña del navegador) -->
+  <link rel="icon" type="image/png" sizes="192px" href="images/favicon.avif">
+
+  <!-- Fuentes personalizadas desde Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Estilos de Bootstrap desde CDN para diseño responsive -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  
+  <!-- Iconos de FontAwesome (CDN) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <!-- Archivo de estilos personalizados -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+ 
+<!-- Pantalla de carga (loader) -->
+<div id="loader" class="loader">
+  <i class="fas fa-tooth fa-spin fa-4x text-primary"></i> <!-- Icono de diente girando -->
+</div>
+
+<!-- Barra de navegación fija en la parte superior -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+  <div class="container">
+    <!-- Logo con icono -->
+    <a class="navbar-brand" href="#">
+      <i class="fas fa-tooth me-1 fa-2x mb-2 text-width"></i>ClínicaDental
+    </a>
+
+    <!-- Botón hamburguesa para menú responsive -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Enlaces del menú -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto"> <!-- Alinea a la derecha con ms-auto -->
+        <li class="nav-item"><a class="nav-link" href="index.html"><i class="fas fa-home me-1"></i>Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" href="perfiles.html"><i class="fas fa-user-md me-1"></i>Perfil</a></li>
+        <li class="nav-item"><a class="nav-link" href="galeria.html"><i class="fas fa-images me-1"></i>Galería</a></li>
+        <li class="nav-item"><a class="nav-link" href="testimonio.html"><i class="fas fa-comments me-1"></i>Testimonios</a></li>
+        <li class="nav-item"><a class="nav-link" href="blog.html"><i class="fas fa-blog me-1"></i>Blog</a></li>
+        <li class="nav-item"><a class="nav-link" href="contacto.html"><i class="fas fa-envelope me-1"></i>Contacto</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Sección de Contacto -->
+<section id="contacto" class="py-5 mt-5 pt-5 bg-light">
+  <div class="container">
+
+    <!-- Formulario centrado con bordes y sombra -->
+    <!-- Sección Contacto -->
+  <div id="contacto" class="section-box text-primary">
+    <h2><i class="fas fa-envelope text-primary"></i> Contacto</h2>
+    <!-- Formulario contacto -->
+    <div class="form-box col-md-6 col-lg-5">
+      <form>
+        <div class="mb-3 text-start">
+          <label class="form-label">Nombre</label> <!-- Etiqueta para nombre -->
+          <input type="text" class="form-control" /> <!-- Campo texto -->
+        </div>
+        <div class="mb-3 text-start">
+          <label class="form-label">Correo</label> <!-- Etiqueta para correo -->
+          <input type="email" class="form-control" /> <!-- Campo email -->
+        </div>
+        <div class="mb-3 text-start">
+          <label class="form-label">Mensaje</label> <!-- Etiqueta para mensaje -->
+          <textarea class="form-control" rows="3"></textarea> <!-- Área de texto -->
+        </div>
+        <!-- reCAPTCHA -->
+        <!--div class="g-recaptcha mb-3" data-sitekey="tu_clave_publica"></div>
+        <div class="text-center"-->   <!-- Preparado para activar un reCAPTCHA -->
+          <button type="submit" class="btn btn-primary">Enviar</button> <!-- Botón enviar -->
+        </div>
+      </form>
+    </div>
+
+
+    <!-- Mapa de Google Maps incrustado -->
+    <div class="row justify-content-center mt-5">
+      <div class="col-md-10">
+        <h2 class="text-center text-primary mb-3">Ubicación</h2>
+        <div class="ratio ratio-16x9">
+          <iframe
+            src="https://www.google.com/maps?q=San+Luis+Potosi,+Mexico&output=embed"
+            allowfullscreen
+            loading="lazy"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Pie de página -->
+<footer class="text-center">
+  <div class="container">
+    <p>&copy; 2025 Clínica Dental. Todos los derechos reservados.</p>
+    <p><a href="#">Aviso de privacidad</a> | <a href="#">Horarios</a></p>
+    
+    <!-- Íconos de redes sociales -->
+    <div>
+      <a href="#" class="me-3"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" class="me-3"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-whatsapp"></i></a>
+    </div>
+  </div>
+</footer>
+
+<!-- Botón flotante de WhatsApp -->
+<a href="https://wa.me/5214440000000" class="circle whatsapp" target="_blank">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<!-- Botón flotante para volver arriba -->
+<a href="#" class="circle top-btn">
+  <i class="fas fa-arrow-up"></i>
+</a>
+
+<!-- Bootstrap JS (para colapsar menú y otros componentes interactivos) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Script para ocultar el loader una vez cargada la página -->
+<script>
+  window.addEventListener("load", function () {
+    const loader = document.getElementById("loader");
+
+    setTimeout(() => {
+      if (loader) {
+        loader.classList.add("hidden"); // Agrega clase que oculta el loader
+
+        // Elimina el loader completamente del DOM
+        setTimeout(() => {
+          loader.remove();
+        }, 500);
+      }
+    }, 1500); // Espera 1.5 segundos antes de iniciar el proceso
+  });
+</script>
+
+<!-- Archivo JavaScript personalizado -->
+<script src="js/script.js"></script>
+</body>
+</html>

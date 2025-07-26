@@ -1,0 +1,181 @@
+body {
+  font-family: 'Roboto', sans-serif; /* Establece la fuente del texto de toda la página */
+  background-color: #f4f8fb; /* Color de fondo general (azul claro muy suave) */
+}
+
+/* Loader inicial */
+.loader {
+  position: fixed; /* Fija el loader en pantalla completa */
+  top: 0; /* Se alinea al borde superior */
+  left: 0; /* Se alinea al borde izquierdo */
+  width: 100vw; /* Ocupa todo el ancho de la ventana */
+  height: 100vh; /* Ocupa todo el alto de la ventana */
+  background-color: white; /* Fondo blanco mientras se muestra */
+  display: flex; /* Flexbox para centrar el contenido */
+  align-items: center; /* Centra verticalmente el ícono dentro del loader */
+  justify-content: center; /* Centra horizontalmente el ícono dentro del loader */
+  z-index: 9999; /* Se asegura de que esté encima de todo lo demás */
+  opacity: 1; /* Visibilidad inicial completa */
+  transition: opacity 0.5s ease; /* Transición suave al ocultarse */
+}
+
+/* Ocultar el loader con animación */
+.loader.hidden {
+  opacity: 0; /* Hace el loader transparente */
+  pointer-events: none; /* Desactiva interacciones con el loader oculto */
+}
+
+/* Estilos para el menú de navegación */
+.navbar {
+  background-color: #007bff; /* Azul brillante (color principal de Bootstrap) */
+}
+
+.navbar-brand, .nav-link {
+  color: #fff !important; /* Fuerza el color blanco en el texto del logo y los enlaces */
+}
+
+.navbar-nav .nav-item {
+  margin: 0 5px; /* Espaciado entre ítems del menú */
+}
+
+.navbar-nav .nav-link {
+  background-color: rgba(255, 255, 255, 0.4); /* Fondo blanco semi-transparente para los enlaces */
+  border-radius: 8px; /* Bordes redondeados */
+  transition: background-color 0.3s ease; /* Transición suave al pasar el mouse */
+  color: #fff !important; /* Texto blanco */
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
+  background-color: rgba(0, 0, 0, 0.25); /* Oscurece el fondo al pasar el mouse o enfocar */
+  color: #fff !important; /* Mantiene el texto blanco */
+  text-decoration: none; /* Quita subrayado */
+}
+
+/* Estilo para las imágenes del carrusel */
+.carousel-item img {
+  height: 70vh; /* Altura fija al 70% del alto de la ventana */
+  object-fit: cover; /* Hace que la imagen cubra completamente sin deformarse */
+}
+
+/* Caja general para secciones (como contacto) */
+.section-box {
+  display: flex; /* Usa Flexbox para organizar los elementos hijos */
+  flex-direction: column; /* Los hijos se colocan verticalmente uno debajo del otro */
+  align-items: center; /* Centra los elementos hijos horizontalmente en el contenedor */
+  justify-content: center; /* Centra los elementos hijos verticalmente (si el contenedor tiene altura) */
+  text-align: center; /* Centra el texto dentro del contenedor */
+  padding: 40px 15px; /* Agrega espacio interior: 40px arriba y abajo, 15px a los lados */
+}
+
+/* Caja visual del formulario */
+.form-box {
+  background-color: #ffffff; /* Fondo blanco para destacar el formulario */
+  border: 1px solid #007bff; /* Borde azul con color hexadecimal #007bff */
+  border-radius: 12px; /* Bordes redondeados con radio de 12 píxeles */
+  padding: 30px; /* Espacio interior de 30 píxeles en todos lados */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra suave para dar profundidad: desplazamiento vertical 4px, desenfoque 12px, con color negro semitransparente */
+}
+
+/* Bordes azules en campos del formulario */
+.form-box input.form-control,
+.form-box textarea.form-control {
+  border: 2px solid #007bff; /* Borde sólido azul de 2 píxeles para inputs y textarea dentro de .form-box */
+  border-radius: 6px; /* Bordes redondeados con radio de 6 píxeles para suavizar esquinas */
+  box-shadow: none; /* Elimina cualquier sombra predeterminada en los campos */
+}
+
+/* Estilos para botones flotantes en forma de círculo */
+.circle {
+  width: 50px; /* Ancho del círculo */
+  height: 50px; /* Alto del círculo */
+  border-radius: 50%; /* Hace que sea perfectamente circular */
+  display: flex; /* Usamos flexbox para centrar el ícono */
+  align-items: center; /* Centrado vertical */
+  justify-content: center; /* Centrado horizontal */
+  color: #fff; /* Color del ícono */
+  font-size: 20px; /* Tamaño del ícono */
+  position: fixed; /* Se mantiene fijo en pantalla */
+  z-index: 999; /* Se asegura de que esté encima de otros elementos */
+}
+
+/* Estilo específico para el botón de WhatsApp */
+.whatsapp {
+  background-color: #25d366; /* Verde característico de WhatsApp */
+  bottom: 20px; /* Separación inferior respecto a la ventana */
+  left: 20px; /* Separación izquierda */
+}
+
+/* Estilo específico para el botón de volver arriba */
+.top-btn {
+  background-color: #007bff; /* Azul igual al navbar */
+  bottom: 20px; /* Desde abajo */
+  right: 20px; /* Desde la derecha */
+}
+
+/* Estilos del pie de página */
+footer {
+  background-color: #007bff; /* Azul oscuro profesional */
+  color: #fff; /* Texto blanco */
+  padding: 2rem 0; /* Espaciado vertical */
+}
+
+footer a {
+  color: #fff; /* Enlaces blancos */
+  text-decoration: none; /* Sin subrayado */
+}
+
+/* ANIMACIÓN: Efecto vibración en íconos de tarjetas de servicio */
+@keyframes vibrar {
+  0% { transform: translateX(0); } /* Punto inicial */
+  25% { transform: translateX(-2px); } /* Se mueve un poco a la izquierda */
+  50% { transform: translateX(2px); } /* Luego a la derecha */
+  75% { transform: translateX(-2px); } /* Vuelve a la izquierda */
+  100% { transform: translateX(0); } /* Termina en el centro */
+}
+
+/* Aplica animación al ícono cuando el mouse pasa por una tarjeta de servicio */
+.servicios .card:hover i {
+  animation: vibrar 0.3s linear; /* Aplica la animación vibrar durante 0.3s */
+}
+
+/* Apariencia general de las tarjetas de servicio */
+.servicios .card {
+  border: none; /* Sin borde */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* Sombra suave por defecto */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transiciones suaves */
+}
+
+/* Cuando el mouse pasa sobre una tarjeta */
+.servicios .card:hover {
+  transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2); /* Sombra más intensa */
+}
+
+/* Contenedor tipo grid para rompecabezas */
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* tantas columnas como quepan */
+    gap: 15px; /* espacio entre imágenes */
+  }
+
+  /* Estilo general para imágenes */
+  .gallery-grid img {
+    width: 100%;
+    aspect-ratio: 4 / 3; /* para mantener proporción tipo rompecabezas */
+    object-fit: cover; /* recorta imagen para llenar el área */
+    border-radius: 12px; /* esquinas redondeadas */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15); /* sombra para resaltar */
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+    filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.1));
+  }
+
+  /* Efecto hover para resaltar la imagen */
+  .gallery-grid img:hover {
+    transform: scale(1.1) rotate(2deg); /* ligera ampliación y rotación para efecto dinámico */
+    box-shadow: 0 12px 24px rgba(0,0,0,0.3); /* sombra más intensa */
+    filter: drop-shadow(4px 8px 12px rgba(0,0,0,0.3));
+    z-index: 10; /* que esté encima de otras */
+  }
