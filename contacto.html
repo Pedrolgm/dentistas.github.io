@@ -30,6 +30,7 @@
 
   <!-- Archivo de estilos personalizados -->
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/form.css">
 </head>
 <body>
  
@@ -72,28 +73,28 @@
     <!-- Formulario centrado con bordes y sombra -->
     <!-- Sección Contacto -->
   <div id="contacto" class="section-box text-primary">
-    <h2><i class="fas fa-envelope text-primary"></i> Contacto</h2>
     <!-- Formulario contacto -->
     <div class="form-box col-md-6 col-lg-5">
-      <form>
-        <div class="mb-3 text-start">
-          <label class="form-label">Nombre</label> <!-- Etiqueta para nombre -->
-          <input type="text" class="form-control" /> <!-- Campo texto -->
-        </div>
-        <div class="mb-3 text-start">
-          <label class="form-label">Correo</label> <!-- Etiqueta para correo -->
-          <input type="email" class="form-control" /> <!-- Campo email -->
-        </div>
-        <div class="mb-3 text-start">
-          <label class="form-label">Mensaje</label> <!-- Etiqueta para mensaje -->
-          <textarea class="form-control" rows="3"></textarea> <!-- Área de texto -->
-        </div>
-        <!-- reCAPTCHA -->
-        <!--div class="g-recaptcha mb-3" data-sitekey="tu_clave_publica"></div>
-        <div class="text-center"-->   <!-- Preparado para activar un reCAPTCHA -->
-          <button type="submit" class="btn btn-primary">Enviar</button> <!-- Botón enviar -->
-        </div>
-      </form>
+       <!-- Sección Contacto -->
+<div id="contacto" class="section-box text-primary">
+  <h2><i class="fas fa-envelope text-primary"></i> Contacto</h2>
+
+  <!-- Botón para abrir el Google Form -->
+  <button id="openFormBtn" class="open-btn">Abrir Formulario</button>
+</div>
+
+<!-- Modal con iframe -->
+<div id="formModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <!-- Aquí incrustas tu Google Form -->
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfYK2FebW-x4zwUWWguPX7F6NOKKIPLpTBXyVmpNqRudK0Q3Q/viewform?usp=header" 
+            width="100%" height="500" frameborder="0" marginheight="0" marginwidth="0">
+    Cargando…
+    </iframe>
+  </div>
+</div>
+    </div>
     </div>
 
 
@@ -157,6 +158,29 @@
       }
     }, 1500); // Espera 1.5 segundos antes de iniciar el proceso
   });
+</script>
+
+<script>
+const modal = document.getElementById("formModal");
+const btn = document.getElementById("openFormBtn");
+const span = document.getElementsByClassName("close")[0];
+
+// Abrir modal
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// Cerrar modal al hacer clic en la X
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// Cerrar modal al hacer clic fuera del contenido
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
 </script>
 
 <!-- Archivo JavaScript personalizado -->
